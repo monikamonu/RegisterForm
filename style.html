@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="style.css">
+    <title>Register Form</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+        <form action="style1.html"  autocomplete="off" onsubmit="return validation()">
+        <h2>Register Form</h2>
+        <label>Name</label>
+        <input id="name" name="name" placeholder="Name" type="text"><br/><br/>
+        <span id="username"></span><br>
+        <label>Email</label>
+        <input id="email" name="email" placeholder="Email" type="text"><br/><br/>
+        <span id="emailadd"></span><br>
+        <label>PhoneNumber</label>
+        <input id="contact" name="contact" placeholder="Contact No." type="text"><br/><br/>
+        <span id="phno"></span><br>
+        <button type="submit" value="submit" onclick="passvalues();">submit</button>
+        
+        </form>
+        </div>
+        </div>
+        <script type="text/javascript">
+        function validation()
+        { 
+            
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var contact = document.getElementById('contact').value;
+            if(name == "" && email == "" && contact == "")
+            {
+                document.getElementById('username').innerHTML="**Name cannot be empty**";
+                document.getElementById('emailadd').innerHTML="**Email cannot be empty**";
+                document.getElementById('phno').innerHTML="**Phone number cannot be blank**";
+            }
+            else if(isNaN('contact'))
+            {
+                document.getElementById('phno').innerHTML="**Phone number should be number**";
+            }
+        
+            }
+            function passvalues()
+            {
+                var name=document.getElementById("name").value;
+                localStorage.setItem("textvalue",name);
+                return false;
+            }
+        </script>
+    
+</body>
+</html>

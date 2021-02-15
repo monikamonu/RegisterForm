@@ -1,0 +1,29 @@
+input{
+    width:400px;
+    height: 35px;
+    border-radius: 5px;
+    border:2px solid blue;
+}
+form{
+    border:2px solid black;
+    align-items: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    padding: 100px;
+}
+button{
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    margin-left: 20%;
+}
+button:hover
+{
+    background-color: blue;
+}
+span{
+    color:red;
+    font-size: 18px;
+}
